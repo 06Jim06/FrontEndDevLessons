@@ -20,6 +20,17 @@ body{
     background: url("../images/background.jpg") repeat-y;
     overflow-y: scroll;
 }
+body::before {
+    content: "";
+    position: fixed; /* Fixed position to cover the entire viewport */
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)); /* Adjust the color and transparency */
+    pointer-events: none; /* Allows clicks to "pass through" the overlay to the elements underneath */
+    z-index: -1; /* Puts the overlay behind the body content */
+}
 
 #background-video {
     position: fixed;
