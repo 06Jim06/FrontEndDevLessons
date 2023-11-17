@@ -1,0 +1,164 @@
+/* |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| */
+/* Done by Jim */
+*,
+html,
+body{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(38, 38, 38);
+
+}
+.legend{
+    grid-area: legend;
+    display: grid;
+    place-items: center;
+    text-align: center;
+    color: white;
+    border: 1px solid white;
+    padding: 1em;
+}
+.legend b{
+    font-size: 1.1em;
+}
+
+.container-shapes{
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+    "jim xinrou"
+    "jan akmal"
+    "syaza yikai"
+    "legend legend";
+    gap: 5rem;
+    padding: 5rem;
+
+}
+.center{
+    display: grid;
+    justify-self: center;
+    place-items: center;
+    text-align: center;
+}
+.shape1{
+    grid-area: jim;
+    width: 150px;
+    height: 150px;
+    clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+    background-color: rgb(43, 156, 162);
+    color: white;
+    font-size: 4em;
+}
+.shape1:hover {
+    background-color: aliceblue;
+    color: black;
+    clip-path: none;
+    border-radius: 50%;
+    transform: scale(1.2);
+    box-shadow: 0px 0px 20px yellow;
+    transition: all 0.3s linear;
+}
+/* |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| */
+/* Done by XinRou */
+.shape2{
+    grid-area: xinrou;
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 100px solid yellow;
+    display: inline-block;
+    transition: all 0.3s ease-in-out;
+    transform-origin: bottom center;
+    color: rgb(255, 255, 255);
+    font-size: 2em;
+}
+/* |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| */
+/* Done by Jan */
+.shape3{
+    grid-area: jan;
+    width: 100px;
+    height: 100px;
+    margin: 20px;
+    display: inline-block;
+    transition: all 0.3s ease-in-out;
+}
+.circle {
+    border-radius: 50%;
+    background-color: lightblue;
+  }
+
+.circle:hover {
+    /* content: ""; */
+    /* position: absolute; */
+    border-radius: 0;
+    /* width: 100px;
+    height: 100px; */
+    background-color: plum;
+}
+/* |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| */
+/* Done by Akmal */
+.shape4 {
+    grid-area: akmal;
+    width: 100px;
+    height: 100px;
+    margin: 20px;
+    display: inline-block;
+    transition: all 0.2s ease-in-out;
+}
+
+.circle2 {
+    height: 100px;
+    width: 200px;
+    background-color: blue;
+    border-radius: 50%;
+    transition: width 1s;
+}
+   
+.circle2:hover {
+    height: 100px;
+    width: 100px;
+    background-color: purple;
+}
+/* |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| */
+/* Done by Syaza */
+.shape5 {
+    height: 0px;
+    width: 100px;
+    border-right: 25px solid transparent;
+    border-bottom: 100px solid blue;
+    border-left: 25px solid transparent;
+}
+.shape5:hover {
+    width: 0px;
+    height: 0px;
+    border-right: 60px solid transparent;
+    border-bottom: 100px solid green;
+    border-left: 60px solid transparent;
+    transform: rotate(45deg);
+}
+/* |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| */
+/* Done by Yikai */
+.shape6 {
+    grid-area: yikai;
+    width: 0;
+    height: 0;
+    transition: transform 0.5s ease-in-out, background-color 0.5s ease-in-out;
+  }
+
+.shape6.square {
+    width: 100px;
+    height: 100px;
+    background-color: #ff6347;
+    clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+  }
+
+.shape6:hover {
+    transform: rotate(360deg);
+  }
+
+.shape6.square {
+    background-color: #4caf50;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+  }

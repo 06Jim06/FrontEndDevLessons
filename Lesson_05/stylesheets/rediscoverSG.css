@@ -1,0 +1,19 @@
+body{
+    font-size: 16px;
+    overflow-y: scroll;
+}
+.container-discover{
+    background-color: rgba(0, 0, 0, 0.5);
+    max-width: 80vw;
+    display: grid;
+    margin: 0 auto;
+    row-gap: 4rem;
+}
+
+article{
+    display: flex;
+    gap: 2rem;
+}
+
+
+

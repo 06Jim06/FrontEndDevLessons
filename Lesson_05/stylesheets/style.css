@@ -1,0 +1,87 @@
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    box-sizing: border-box;
+    padding: 10px;
+    width: 100vw;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    
+}
+h1 {
+    display: inline-block;
+    margin: 0;
+}
+nav {
+    margin-top: 10px;
+}
+nav a {
+    text-decoration: none;
+    color: black;
+    padding: 0 10px;
+}
+main {
+    line-height: 22px;
+}
+section{
+    display: block;
+}
+.images{
+    display: flex;
+    justify-content: center;
+}
+img {
+    flex: 1; 
+    margin: 0;
+    padding: 0;
+} 
+
+/* TODO 3: Add CSS media queries for smaller screens */
+@media only screen and (max-width: 768px) {
+body{
+    width: clamp(285px, 768px);
+    margin: 0 auto ;
+}
+
+header{
+    flex-direction: column;
+}
+/* TODO 4: Center logo */
+h1 {
+        text-align: center;
+        width: 100%;
+    }
+/* TODO 5: Shift navigation below logo, add a black background and center all nav items */
+nav {
+    text-align: center;
+    background-color: black;
+    padding: 10px 0; 
+}
+nav a {
+
+    padding: 10px;
+    color: white;
+}
+main {
+    text-align:justify; 
+}
+section {
+    flex-direction: column; 
+    display: block;
+    width: 100%;
+}
+section p{
+    line-height: normal;
+    padding: 10px;
+}
+img{
+    width: 100%;
+}
+/* TODO 7: Hide the video */
+iframe {
+    display: none;
+}
+}

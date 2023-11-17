@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 04 - Shape</title>
+
+    <link rel="stylesheet" href="shape.css">
+    
+</head>
+<body>
+    <div class="container-shapes">
+        <!-- leader : JIM -->
+        <div class="shape1 center Jim hover-effect">JIM</div> 
+        <div class="shape2 center xinrou hover-effect"></div>
+        <div class="shape3 circle center jan hover-effect"></div>
+        <div class="shape4 circle2 center akmal hover-effect"></div>
+        <div class="shape5 center syaza hover-effect"></div>
+        <div class="shape6 square center yikai hover-effect"></div>
+
+        <div class="legend">               
+            <b>Legend</b>             
+            <div id="shape1-legend">Pentagon = Jim</div>
+            <div id="shape2-legend">Triangle = Xin Rou</div>
+            <div id="shape3-legend">Circle = Jan</div>
+            <div id="shape4-legend">Oval = Akmal </div>
+            <div id="shape5-legend">Trapezium = Syaza</div>
+            <div id="shape6-legend">Square = Yikai</div>
+        </div>
+    </div>
+
+
+<script> 
+/* |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| */
+/* Done by Jim */
+    function setLegendStyles(legendId, color,backgroundColor) {
+        let legendItem = document.getElementById(legendId);
+        if (legendItem) {
+            legendItem.style.color = color;
+            legendItem.style.backgroundColor = backgroundColor;
+            legendItem.style.width = '100%';
+        }
+    }
+
+    let shapes = document.querySelectorAll('.hover-effect');
+
+    shapes.forEach(function(shape) {
+        let firstClass = shape.classList[0];
+        let legendId = firstClass + '-legend';
+
+        shape.addEventListener('mouseover', function() {
+            setLegendStyles(legendId, 'black','yellow');
+        });
+
+        shape.addEventListener('mouseout', function() {
+            setLegendStyles(legendId, 'inherit',"inherit");
+        });
+    });
+</script>
+
+</body>
+</html>

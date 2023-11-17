@@ -1,0 +1,92 @@
+body{
+    margin: 0;
+    padding:  0rem 6rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    background-color:azure;
+}
+
+.Grid_Container{
+    display: grid;
+    grid-template-columns: repeat(2,1fr) ;
+    grid-template-rows: .1fr .8fr;
+    grid-template-areas:
+    "nav    nav   "
+    "pic   content ";
+    border: 1px solid black;
+}
+
+.navigations{
+    grid-area: nav;
+    background-color: rgb(58, 175, 169);
+    color: white;
+
+}
+.navigations ul{
+    list-style: none;
+
+}
+.navigations ul a{
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: .5rem ;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+
+}
+.navigations ul a:hover{
+    color: yellow;
+    font-size: larger;
+    font-weight: bold;
+}
+
+.contentLeftPicture{
+    grid-area: pic;
+    height: 100%;
+}
+
+.contentRightInformation{
+    grid-area: content;
+    padding: 2rem;
+    background-color: rgb(32, 32, 32);
+    color: white;
+}
+.contentRightInformation p{
+    text-align: justify;
+    font-size: 20px;
+    
+}
+.contentRightInformation p::first-letter {
+    font-size: 200%; 
+    font-weight: bold;  
+    float:inline-start; 
+    margin-right: 6px; 
+}
+
+#headerTitle{
+    text-align: center;
+}
+
+.redirectBtn{
+  background-color: #fff000;
+  border-radius: 12px;
+  color: #000;
+  cursor: pointer;
+  font-weight: bold;
+  padding: 10px 15px;
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box;
+  border: 0;
+  font-size: 20px;
+  margin-top: 1em;
+}
+.redirectBtn:hover{
+    background-color: #faf9e7;
+    color: #000;
+}
+
+
