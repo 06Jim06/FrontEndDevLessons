@@ -17,8 +17,8 @@ body{
 
 body{
     font-family: Roboto;
-    background: url("../images/background.jpg");
-    overflow: scroll;
+    background: url("../images/background.jpg") repeat-y;
+    overflow-y: scroll;
 }
 
 #background-video {
@@ -35,7 +35,7 @@ body{
 .grid-container{
     display: grid;
     grid-template-columns:1fr;
-    grid-template-rows: 20vh 75vh 5vh;
+    grid-template-rows: auto 75vh auto;
     width: 100vw;
 
     grid-template-areas: 
@@ -51,10 +51,9 @@ body{
     gap: 10rem;
 }
 .logo{
-    display: flex;
+   display: absolute;
     gap: 1rem;
     font-weight: bold;
-    padding: 1rem;
 }
 .logo img{
     width: 5rem;
@@ -76,30 +75,42 @@ body{
         transform: rotate(360deg);
     }
 }
-
-.redirect-links{
+.nav-container{
+    width: 100%;
+}
+.navbar{
     grid-area: nav;
     display: flex;
+    width: 100%;
+    padding-right: 3rem;
+    justify-content: space-between;
+    align-items: center;
+}
+.redirect-links{
+    display: flex;
     gap: 4rem;
-    margin: auto 0;
+    justify-items: center;
+    align-items: center;
 }
-.redirect-links a{
-    display: block;
-}
-nav ul li {
+
+nav li {
     list-style: none;
     position: relative;
 
 }
-nav ul li a{
+nav a{
     text-decoration: none;
 }
 nav ul li a:hover{
     color: rgb(242, 211, 154);
     font-size: 1.1em;
 }
-.dropdown-item .sub-menu{
-    visibility:hidden;
+.dropdown-item{
+    margin-top: 4rem;
+}
+.dropdown-item > .sub-menu{
+    visibility: hidden;
+
 }
 .dropdown-item:hover .sub-menu{
     visibility: visible;
@@ -110,10 +121,8 @@ nav ul li a:hover{
     display: flex;
     width: 100vw;
     height: 100%;
-
     align-items:flex-end;
-    font-size: 4rem;
-    overflow-y:scroll;
+    text-align: center;
 
 }
 .article1{
@@ -155,22 +164,59 @@ p{
     font-weight: bold;
     text-decoration: underline;
 }
+.hamburg{
+    display: none;
+}
 
 @media only screen and (max-width: 768px) {
     #background-video{
         visibility: hidden;
     }
-    .articles{
-        grid-area: article;
+
+    
+}
+@media only screen and (max-width: 1150px) {
+    .redirect-links{
+        display: none;
+    }
+    body{
+        min-width: 540px;
+    }
+    .hamburg{
         display: flex;
         flex-direction: column;
-        position: fixed;
-        width: 100vw;
-        flex-wrap: wrap;
-        margin:0;
+        width: 50%;
+        height: 100%;
+        align-items: flex-end;
         
     }
-    
+    #hamburg{
+        display: none;
+        background-color: rgba(255, 255, 255, 0.427);
+        color: black;
+        height: 100%;
+        width: 100%;
+        overflow: visible;
+        padding: 1rem;
+        z-index: 1;
+    }
+    .hamburg-container a{
+        color: black;
+
+    }
+    nav ul li a:hover{
+        color: rgb(26, 43, 232);
+        font-size: 1.1em;
+    }
+    #tours{
+        display: none;
+    }
+
+    .articles{
+        flex-direction: column;
+        row-gap: 1rem;
+    }
+
 }
 
 

@@ -10,28 +10,65 @@
 <body>
     <div class="grid-container">
         <nav class="nav-container">
-            
-            <div class="logo">
-                <a href="index.html" class="text-deco-0">
-                    <img src="images/logo.svg" hr alt="" srcset="">
-                    <p >World Xplore</p>
-                </a>
+            <div class="navbar">
+                <div class="logo">
+                    <a href="index.html" class="text-deco-0">
+                        <img src="images/logo.svg" hr alt="" srcset="">
+                        <p >World Xplore</p>
+                    </a>
+                </div>
+                <ul class="redirect-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li class="dropdown-item " tabindex="0" >
+                        <a href="pkgTour.html">Package Tours</a>
+                        <ul class="sub-menu">
+                            <li><a href="#">Tour 1 - Singapore</a></li>
+                            <li><a href="#">Tour 2 - Australia</a></li>
+                            <li><a href="#">Tour 3 - Switzerland</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="rediscoverSG.html">Rediscover Singapore</a></li>
+                    <li><a href="cruises.html">Cruises</a></li>
+                    <li><a href="contactUs.html">Contact Us</a></li>
+                </ul>
+
                 
+                <!-- med-small screens -->
+            
+                <div class="hamburg">
+                    
+                    <img src="icons/hamburger.png" width="30rem" height="30rem" onclick="displayHamburg()">
+                    
+                    <div id="hamburg" class="hamburg-container">
+                        <div class="index">
+                            <li><a href="index.html">Home</a>
+                        </div>
+                        <ul class="pkTour">
+                        <div class="pckgTour" style="display: flex; gap: .5rem; align-items: center;">
+                            <li><a href="#">Package Tours</a></li>
+                            <img id="arrow" src="icons/right-arrow.png" width="15rem" height="15rem" onclick="displayTours()"">
+                        </div>
+                        <div id="tours">
+                            <li><a href="#">Tour 1 - Singapore</a></li>
+                            <li><a href="#">Tour 2 - Australia</a></li>
+                            <li><a href="#">Tour 3 - Switzerland</a></li>
+                        </div>
+
+                        </ul>
+                        <div class="rediscoverSG">
+                            <li><a href="rediscoverSG.html">Rediscover Singapore</a></li>
+                        </div>
+                        <div class="cruises">
+                            <li><a href="cruises.html">Cruises</a></li>
+                        </div>
+                        <div class="contactUs">
+                            <li><a href="contactUs.html">Contact Us</a></li>
+                        </div>
+
+                    </div> 
+                </ul>
             </div>
-            <ul class="redirect-links">
-                <li><a href="index.html">Home</a></li>
-                <li class="dropdown-item " tabindex="0" >
-                    <a href="pkgTour.html">Package Tours</a>
-                    <ul class="sub-menu">
-                        <li><a href="#">Tour 1 - Singapore</a></li>
-                        <li><a href="#">Tour 2 - Australia</a></li>
-                        <li><a href="#">Tour 3 - Switzerland</a></li>
-                    </ul>
-                </li>
-                <li><a href="rediscoverSG.html">Rediscover Singapore</a></li>
-                <li><a href="cruises.html">Cruises</a></li>
-                <li><a href="contactUs.html">Contact Us</a></li>
-            </ul>
+
         </nav>
         <main>
             <video autoplay muted loop id="background-video">
@@ -44,7 +81,7 @@
                     <p><img class="custom-size" src="images/SG.jpg" alt="" srcset=""></p>
                     <h1 class="p-1">Singapore</h1>
                     <div>
-                        <p class="text-align-center p-1 text-control">
+                        <p id="details-switz" class="text-align-center p-1 text-control">
                             Welcome to the vibrant city-state of Singapore! 
                             Immerse yourself in a melting pot of cultures, 
                             savor delectable local cuisine, and explore iconic 
@@ -59,7 +96,7 @@
                     <p><img class="custom-size" src="images/australia.jpg" alt="" srcset=""></p>
                     <h1 class="p-1">Australia</h1>
                     <div>
-                        <p class="text-align-center p-1 text-control">
+                        <p id="details-switz" class="text-align-center p-1 text-control">
                             Discover the wonders of Australia, from the breathtaking landscapes 
                             of the Outback to the stunning coastal beauty. Experience unique 
                             wildlife, vibrant cities, and the laid-back Aussie lifestyle that 
@@ -73,7 +110,7 @@
                     <p><img class="custom-size" src="images/switzerland.jpg" alt="" srcset=""></p>
                     <h1 class="p-1">Switzerlands</h1>
                     <div>
-                        <p class="text-align-center p-1 text-control">
+                        <p id="details-switz" class="text-align-center p-1 text-control">
                             Welcome to the picturesque landscapes of Switzerland! Indulge in the 
                             charm of the Swiss Alps, pristine lakes, and charming villages. 
                             Experience world-class skiing, hiking, and enjoy the serene beauty 
@@ -90,6 +127,10 @@
                 <p>&copy; 2023 World Xplore. All Rights Reserved.</p>
             </footer>
         </main>
+
+        <script>
+            
+        </script>
 
     </div>
 </body>

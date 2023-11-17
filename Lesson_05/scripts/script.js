@@ -21,3 +21,30 @@ document.addEventListener('DOMContentLoaded', ()=> {
         });
     });
 });
+
+
+
+function displayHamburg() {
+    let hamburg = document.getElementById("hamburg");
+  
+    if (hamburg.style.display === "block") {
+      hamburg.style.display = "none";
+    } else {
+      hamburg.style.display = "block";
+    }
+  }
+
+  function displayTours(){
+    let tours = document.getElementById("tours");
+    let arrow = document.getElementById("arrow");
+
+    if (tours.style.display === "block") {
+        tours.style.display = "none";
+        arrow.setAttribute("src", "icons/right-arrow.png");
+
+    } else {
+        tours.style.display = "block";
+        arrow.setAttribute("src", "icons/down-arrow.png");
+        ;
+    }
+  }
